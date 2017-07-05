@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DownloadImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pHH-qj-GiV">
+                                <rect key="frame" x="16" y="20" width="343" height="300"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8sD-35-0K8">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="150"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RnC-4H-M3L">
+                                        <rect key="frame" x="0.0" y="150" width="343" height="150"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8sD-35-0K8" firstAttribute="height" secondItem="RnC-4H-M3L" secondAttribute="height" id="4bD-r1-Cgm"/>
+                                    <constraint firstAttribute="height" constant="300" id="7Em-A7-NqR"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UD6-BM-uhB">
+                                <rect key="frame" x="16" y="328" width="343" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dcb-az-b9I">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bM7-iL-ifR">
+                                        <rect key="frame" x="0.0" y="30" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEr-eU-mOu">
+                                <rect key="frame" x="164" y="431" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QEf-cb-vQv"/>
+                                    <constraint firstAttribute="width" constant="46" id="ZgD-Nn-o8p"/>
+                                </constraints>
+                                <state key="normal" title="Load"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnDownloadClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJD-eK-qbE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pHH-qj-GiV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6BH-SW-iGH"/>
+                            <constraint firstItem="nEr-eU-mOu" firstAttribute="top" secondItem="UD6-BM-uhB" secondAttribute="bottom" constant="43" id="KXK-LZ-62L"/>
+                            <constraint firstItem="nEr-eU-mOu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OeG-wV-7gp"/>
+                            <constraint firstItem="UD6-BM-uhB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="QGp-hx-16N"/>
+                            <constraint firstItem="pHH-qj-GiV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="SzY-vy-Xdk"/>
+                            <constraint firstAttribute="trailing" secondItem="UD6-BM-uhB" secondAttribute="trailing" constant="16" id="dcm-Ol-tZA"/>
+                            <constraint firstItem="UD6-BM-uhB" firstAttribute="top" secondItem="pHH-qj-GiV" secondAttribute="bottom" constant="8" id="k6n-O5-ras"/>
+                            <constraint firstAttribute="trailing" secondItem="pHH-qj-GiV" secondAttribute="trailing" constant="16" id="yoe-60-rGd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgDownload1" destination="8sD-35-0K8" id="iHx-IQ-0CF"/>
+                        <outlet property="imgDownload2" destination="RnC-4H-M3L" id="DaH-rS-ThQ"/>
+                        <outlet property="txtURL1" destination="Dcb-az-b9I" id="oEi-gP-jQv"/>
+                        <outlet property="txtURL2" destination="bM7-iL-ifR" id="e03-nC-EaJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
